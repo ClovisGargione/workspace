@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="178.49568452380956" y="567.0">model.Empresa</node>
+    <node x="582.1206845238096" y="145.0">model.Usuario</node>
+    <node x="472.49568452380953" y="334.0">model.Funcionario</node>
+    <node x="95.49122023809534" y="145.0">model.Pedido</node>
+    <node x="364.8162202380953" y="145.0">model.Endereco</node>
+    <node x="211.5641369047619" y="389.0">model.Entregas</node>
+    <node x="59.0625" y="1011.0">model.Cliente</node>
+    <node x="121.49732142857147" y="0.0">model.Produto</node>
+    <node x="24.49568452380953" y="866.0">model.Favoritos</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="model.Empresa" target="model.Entregas">
+      <point x="-54.60000000000002" y="-124.5" />
+      <point x="260.39568452380956" y="542.0" />
+      <point x="268.0641369047619" y="542.0" />
+      <point x="0.0" y="36.5" />
+    </edge>
+    <edge source="model.Cliente" target="model.Favoritos">
+      <point x="-46.599999999999994" y="-102.5" />
+      <point x="128.9625" y="991.0" />
+      <point x="90.99568452380953" y="991.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="model.Pedido" target="model.Produto">
+      <point x="0.0" y="-69.5" />
+      <point x="181.99122023809534" y="120.0" />
+      <point x="187.99732142857147" y="120.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="model.Empresa" target="model.Funcionario">
+      <point x="109.19999999999999" y="-124.5" />
+      <point x="424.1956845238095" y="542.0" />
+      <point x="578.9956845238096" y="542.0" />
+      <point x="0.0" y="91.5" />
+    </edge>
+    <edge source="model.Pedido" target="model.Cliente">
+      <point x="-21.625" y="69.5" />
+      <point x="160.36622023809534" y="309.0" />
+      <point x="167.99568452380956" y="309.0" />
+      <point x="167.99568452380956" y="991.0" />
+      <point x="175.56249999999997" y="991.0" />
+      <point x="-2.8421709430404007E-14" y="-102.5" />
+    </edge>
+    <edge source="model.Empresa" target="model.Pedido">
+      <point x="-109.19999999999999" y="-124.5" />
+      <point x="205.79568452380957" y="542.0" />
+      <point x="201.0641369047619" y="542.0" />
+      <point x="201.0641369047619" y="309.0" />
+      <point x="203.61622023809534" y="309.0" />
+      <point x="21.625" y="69.5" />
+    </edge>
+    <edge source="model.Cliente" target="model.Endereco">
+      <point x="46.599999999999994" y="-102.5" />
+      <point x="222.1625" y="981.0" />
+      <point x="461.99568452380953" y="981.0" />
+      <point x="461.99568452380953" y="309.0" />
+      <point x="453.3162202380953" y="309.0" />
+      <point x="0.0" y="69.5" />
+    </edge>
+    <edge source="model.Funcionario" target="model.Usuario">
+      <point x="53.25" y="-91.5" />
+      <point x="632.2456845238096" y="309.0" />
+      <point x="625.3706845238096" y="309.0" />
+      <point x="-43.25" y="69.5" />
+    </edge>
+    <edge source="model.Funcionario" target="model.Endereco">
+      <point x="-53.25" y="-91.5" />
+      <point x="525.7456845238096" y="309.0" />
+      <point x="512.3162202380954" y="309.0" />
+      <point x="59.00000000000006" y="69.5" />
+    </edge>
+    <edge source="model.Favoritos" target="model.Produto">
+      <point x="-33.25" y="-47.5" />
+      <point x="57.74568452380953" y="841.0" />
+      <point x="0.0" y="841.0" />
+      <point x="0.0" y="120.0" />
+      <point x="143.66398809523812" y="120.0" />
+      <point x="-44.33333333333334" y="47.5" />
+    </edge>
+    <edge source="model.Cliente" target="model.Usuario">
+      <point x="93.19999999999996" y="-102.5" />
+      <point x="268.76249999999993" y="991.0" />
+      <point x="700.4956845238096" y="991.0" />
+      <point x="700.4956845238096" y="309.0" />
+      <point x="711.8706845238096" y="309.0" />
+      <point x="43.25" y="69.5" />
+    </edge>
+    <edge source="model.Cliente" target="model.Pedido">
+      <point x="-93.19999999999999" y="-102.5" />
+      <point x="82.36250000000001" y="991.0" />
+      <point x="13.99568452380953" y="991.0" />
+      <point x="13.99568452380953" y="309.0" />
+      <point x="117.11622023809534" y="309.0" />
+      <point x="-64.875" y="69.5" />
+    </edge>
+    <edge source="model.Empresa" target="model.Endereco">
+      <point x="54.60000000000002" y="-124.5" />
+      <point x="369.5956845238096" y="542.0" />
+      <point x="363.21860119047614" y="542.0" />
+      <point x="363.21860119047614" y="309.0" />
+      <point x="394.3162202380953" y="309.0" />
+      <point x="-59.0" y="69.5" />
+    </edge>
+    <edge source="model.Entregas" target="model.Pedido">
+      <point x="0.0" y="-36.5" />
+      <point x="268.0641369047619" y="309.0" />
+      <point x="246.86622023809534" y="309.0" />
+      <point x="64.875" y="69.5" />
+    </edge>
+    <edge source="model.Favoritos" target="model.Empresa">
+      <point x="33.25" y="-47.5" />
+      <point x="124.24568452380953" y="841.0" />
+      <point x="314.9956845238096" y="841.0" />
+      <point x="0.0" y="124.5" />
+    </edge>
+    <edge source="model.Empresa" target="model.Produto">
+      <point x="0.0" y="-124.5" />
+      <point x="314.9956845238096" y="542.0" />
+      <point x="336.0641369047619" y="542.0" />
+      <point x="336.0641369047619" y="120.0" />
+      <point x="232.3306547619048" y="120.0" />
+      <point x="44.33333333333334" y="47.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="308.57142857142856" y="276.2857142857143" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

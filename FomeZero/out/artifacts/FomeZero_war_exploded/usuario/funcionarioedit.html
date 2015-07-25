@@ -1,0 +1,244 @@
+<div class="grid">
+    <div class="row">
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
+<div class="grid">
+    <div class="row">
+        <h4>
+            <a href="#/home"><span class="mif-arrow-left fg-darker padding10"></span><span style="color: black;">&nbsp;Editar Usu&aacute;rio</span></a>
+        </h4>
+    </div>
+</div>
+
+<form name="formUsuario">
+    <fieldset>
+        <div class="grid">
+            <div class="panel" data-role="panel">
+                <div class="heading  bg-grayLight">
+                    <span class="icon mif-user bg-gray fg-darker"></span>
+                    <span class="title">Dados Pessoais</span>
+                </div>
+                <div class="content">
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control text full-size" data-role="input">
+                                <label>Nome:</label>
+                                <input type="text" name="nome" ng-model="usuario.nome" placeholder="Digite o seu nome" ng-minlength=3 ng-maxlength=60 required>
+                                <button type="button" class="button helper-button clear" tabindex="-1">
+                                    <span class="mif-cross"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formFuncionario.nome.$dirty && formFuncionario.nome.$invalid">
+                                <small class="text-alert" ng-show="formFuncionario.nome.$error.required" >Nome do usu&aacute;rio &eacute; obrigat&oacute;rio</small>
+                                <small class="text-alert" ng-show="formFuncionario.nome.$error.minlength">Nome do usu&aacute;rio deve conter pelo menos 3 letras</small>
+                                <small class="text-alert" ng-show="formFuncionario.nome.$error.maxlength">Nome do usu&aacute;rio n&atilde;o pode ter mais de 60 letras</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <h5>Cargo:</h5>
+                            <div class="input-control select full-size">
+                                <select ng-model="usuario.cargo">
+                                    <option ng-repeat="data in cargos">{{data.cargo}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control text full-size" data-role="input">
+                                <label>Login:</label>
+                                <input type="text" name="login" ng-model="usuario.login" placeholder="Digite o seu login" ng-minlength=3 ng-maxlength=15 required>
+                                <button type="button" class="button helper-button clear" tabindex="-1">
+                                    <span class="mif-cross"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formFuncionario.login.$dirty && formFuncionario.login.$invalid">
+                                <small class="text-alert" ng-show="formFuncionario.login.$error.required" >Login &eacute; obrigat&oacute;rio</small>
+                                <small class="text-alert" ng-show="formFuncionario.login.$error.minlength">Login deve conter pelo menos 3 letras</small>
+                                <small class="text-alert" ng-show="formFuncionario.login.$error.maxlength">Login n&atilde;o pode ter mais de 15 letras</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control password full-size" data-role="input">
+                                <label>Senha:</label>
+                                <input type="password" name="password" ng-model="usuario.senha" placeholder="Digite a senha" ng-minlength=4 ng-maxlength=8 required>
+                                <button class="button helper-button reveal" tabindex="-1" type="button">
+                                    <span class="mif-looks"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formFuncionario.password.$dirty && formFuncionario.password.$invalid">
+                                <small class="text-alert" ng-show="formFuncionario.password.$error.required" >Senha &eacute; obrigat&oacute;rio</small>
+                                <small class="text-alert" ng-show="formFuncionario.password.$error.minlength">Senha deve conter pelo menos 4 caracteres</small>
+                                <small class="text-alert" ng-show="formFuncionario.password.$error.maxlength">Senha n&atilde;o pode ter mais de 8 caracteres</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control password full-size" data-role="input">
+                                <label>Confirme a senha:</label>
+                                <input type="password" name="confirm_password"  ng-model="confirm_password" ui-validate=" '$value==formFuncionario.password.$viewValue' " ui-validate-watch=" 'formFuncionario.password.$viewValue' " placeholder="Confirme a senha" >
+                                <button class="button helper-button reveal" tabindex="-1" type="button">
+                                    <span class="mif-looks"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formFuncionario.confirm_password.$error.validator && ! myForm.password.$error.minlength">
+                                <small class="text-alert">Senhas diferentes</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control text full-size" data-role="input">
+                                <label>E-mail:</label>
+                                <input type="email" name="email" ng-model="usuario.email" placeholder="email@gmail.com.br" required>
+                                <button type="button" class="button helper-button clear" tabindex="-1">
+                                    <span class="mif-cross"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formFuncionario.email.$dirty && formFuncionario.email.$invalid">
+                                <small class="text-alert" ng-show="formFuncionario.email.$error.required" >Email &eacute; obrigat&oacute;rio</small>
+                                <small class="text-alert" ng-show="formFuncionario.email.$error.email">Email inv&aacutelido</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control text full-size" data-role="input">
+                                <label>Telefone:</label>
+                                <input type="text" name="telefone" ng-model="usuario.telefone"  ui-mask="(99)9999-9999" required>
+                                <button type="button" class="button helper-button clear" tabindex="-1">
+                                    <span class="mif-cross"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formFuncionario.telefone.$dirty && formFuncionario.telefone.$invalid">
+                                <small class="text-alert" ng-show="formFuncionario.telefone.$error.required" >Telefone &eacute; obrigat&oacute;rio</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="panel" data-role="panel">
+                <div class="heading  bg-grayLight">
+                    <span class="icon mif-my-location bg-gray fg-darker"></span>
+                    <span class="title">Endere&#231;o</span>
+                </div>
+                <div class="content">
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control text full-size" data-role="input">
+                                <label>Rua:</label>
+                                <input type="text" name="rua" ng-model="usuario.endereco.rua" placeholder="Digite a rua onde mora" ng-minlength=3 ng-maxlength=50 required>
+                                <button type="button" class="button helper-button clear" tabindex="-1">
+                                    <span class="mif-cross"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formUsuario.rua.$dirty && formUsuario.rua.$invalid">
+                                <small class="text-alert" ng-show="formUsuario.rua.$error.required" >Rua &eacute; obrigat&oacute;rio</small>
+                                <small class="text-alert" ng-show="formUsuario.rua.$error.minlength">Rua deve conter pelo menos 3 letras</small>
+                                <small class="text-alert" ng-show="formUsuario.rua.$error.maxlength">Rua n&atilde;o pode ter mais de 50 letras</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control text full-size" data-role="input">
+                                <label>Bairro:</label>
+                                <input type="text" name="bairro" ng-model="usuario.endereco.bairro" placeholder="Digite o bairro onde mora" ng-minlength=3 ng-maxlength=50 required>
+                                <button type="button" class="button helper-button clear" tabindex="-1">
+                                    <span class="mif-cross"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formUsuario.bairro.$dirty && formUsuario.bairro.$invalid">
+                                <small class="text-alert" ng-show="formUsuario.bairro.$error.required" >Bairro &eacute; obrigat&oacute;rio</small>
+                                <small class="text-alert" ng-show="formUsuario.bairro.$error.minlength">Bairro deve conter pelo menos 3 letras</small>
+                                <small class="text-alert" ng-show="formUsuario.bairro.$error.maxlength">Bairro n&atilde;o pode ter mais de 50 letras</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control text full-size" data-role="input">
+                                <label>Complemento:</label>
+                                <input type="text" name="complemento" ng-model="usuario.endereco.complemento" placeholder="Digite o complemento">
+                                <button type="button" class="button helper-button clear" tabindex="-1">
+                                    <span class="mif-cross"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control number full-size" data-role="input">
+                                <label>N&#250;mero:</label>
+                                <input name="numero" required="required" numbers-only="numbers-only" ng-model="usuario.endereco.numero" placeholder="Digite o numero">
+                            </div>
+                            <div class="error" ng-show="formUsuario.numero.$dirty && formUsuario.numero.$invalid">
+                                <small class="text-alert" ng-show="formUsuario.numero.$error.required" >N&#250;mero &eacute; obrigat&oacute;rio</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control text full-size" data-role="input">
+                                <label>CEP:</label>
+                                <input type="text" name="cep" ng-model="usuario.endereco.cep"  ui-mask="99999-999" required>
+                                <button type="button" class="button helper-button clear" tabindex="-1">
+                                    <span class="mif-cross"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formUsuario.cep.$dirty && formUsuario.cep.$invalid">
+                                <small class="text-alert" ng-show="formUsuario.cep.$error.required" >CEP &eacute; obrigat&oacute;rio</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <button class="button loading-pulse block-shadow-info lighten success" type="button" ng-disabled="formUsuario.$invalid" data-ng-click="salvarUsuario(usuario)">Atualizar</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

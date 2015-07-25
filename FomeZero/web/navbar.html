@@ -1,0 +1,20 @@
+<nav class="app-bar bg-darkEmerald fixed-top" data-role="appbar">
+    <a href="#/home" class="app-bar-element branding"><img src="imagens/restaurante.png" style="width:45px; height: auto;"></a>
+    <ul class="app-bar-menu" ng-repeat="data in modulos">
+            <li>
+                <a href="{{data.link}}" class="element">
+                    <span class="{{data.icone}}"></span> {{data.nome}}
+                </a>
+            </li>
+    </ul>
+    <ul class="app-bar-menu place-right" data-flexdirection="reverse">
+        <li>
+            <a href="{{link.link}}{{usuarioId}}">
+                <span class="mif-user"></span> <em>{{usuarioLogado}}</em>
+            </a>
+        </li>
+        <li>
+            <a class="element place-right" href="#/logout"><span class="mif-exit" title="Sair"></span></a>
+        </li>
+    </ul>
+</nav>

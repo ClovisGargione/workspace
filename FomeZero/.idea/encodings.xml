@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/business/implementacao/UsuarioBusiness.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/dto/ModulosDTO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/dto/RetornoUsuarioDTO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/enums/Cargo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/jpa/dao/EnderecoDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/jpa/dao/FuncionarioDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/jpa/facade/ClienteFacade.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/jpa/facade/EmpresaFacade.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/jpa/facade/EnderecoFacade.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/jpa/facade/EntregasFacade.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/jpa/facade/FuncionarioFacade.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/jpa/facade/UsuarioFacade.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/Cliente.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/Empresa.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/Endereco.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/Favoritos.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/Funcionario.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/Pedido.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/Usuario.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/AutenticacaoService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/EmpresaService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/HelloWorld.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/ModulosService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/UsuarioService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/util/MetodosUteis.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/empresa/empresa.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/login/login.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/login/login.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/navbar.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/navbar.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/usuario/edit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/usuario/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/usuario/usuario.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/usuario/usuario.js" charset="UTF-8" />
+  </component>
+</project>
