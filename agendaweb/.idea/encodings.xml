@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/jpa/implementacao/JpaEmailModelDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/ContatoModel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/DestinatarioModel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/EmailModel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/UsuarioModel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/AutenticacaoService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/ContatoService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/DownloadFileService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/UploadFileService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/UsuarioService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/contatos/contatos.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/contatos/lista.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/contatos/novo.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/email/email.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/email/envia.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/login/login.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/navbar.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/usuario/edit.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/usuario/usuario.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/usuario/usuario.js" charset="UTF-8" />
+  </component>
+</project>

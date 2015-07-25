@@ -1,0 +1,142 @@
+<div class="grid">
+    <div class="row">
+    <br>
+    <br>
+    <br>
+    </div>
+</div>
+<div class="grid">
+    <div class="row">
+        <h4>
+            <a href="#/home"><span class="mif-arrow-left fg-darker padding10"></span><span style="color: black;">&nbsp;Editar Usu&aacute;rio</span></a>
+        </h4>
+    </div>
+</div>
+
+<form name="formUsuario">
+    <fieldset>
+        <div class="grid">
+            <div class="panel" data-role="panel">
+                <div class="heading  bg-grayLight">
+                    <span class="icon mif-user bg-gray fg-darker"></span>
+                    <span class="title">Atualizar Usu&aacute;rio</span>
+                </div>
+                <div class="content">
+                    <div class="row cells2">
+                        <div class="cell padding40 no-padding-top">
+                            <br>
+                            <br>
+                            <br>
+                            <div class="row cells3">
+                                <div class="cell colspan2">
+                                    <div class="input-control text full-size" data-role="input-control">
+                                        <label>Nome:</label>
+                                        <input type="text" name="nome" ng-model="usuario.nome" placeholder="Digite o seu nome" ng-minlength=3 ng-maxlength=60 required>
+                                        <button type="button" class="button helper-button clear" tabindex="-1">
+                                            <span class="mif-cross"></span>
+                                        </button>
+                                    </div>
+                                    <div class="error" ng-show="formUsuario.nome.$dirty && formUsuario.nome.$invalid">
+                                        <small class="text-alert" ng-show="formUsuario.nome.$error.required" >Nome do usu&aacute;rio &eacute; obrigat&oacute;rio</small>
+                                        <small class="text-alert" ng-show="formUsuario.nome.$error.minlength">Nome do usu&aacute;rio deve conter pelo menos 3 letras</small>
+                                        <small class="text-alert" ng-show="formUsuario.nome.$error.maxlength">Nome do usu&aacute;rio n&atilde;o pode ter mais de 60 letras</small>
+                                    </div>
+                                </div>
+                                <div class="cell"></div>
+                                <div class="cell"></div>
+                            </div>
+                            <div class="row cells3">
+                                <div class="cell colspan2">
+                                    <div class="input-control text full-size" data-role="input-control">
+                                        <label>Login:</label>
+                                        <input type="text" name="login" ng-model="usuario.login" placeholder="Digite o seu login" ng-minlength=3 ng-maxlength=15 required>
+                                        <button type="button" class="button helper-button clear" tabindex="-1">
+                                            <span class="mif-cross"></span>
+                                        </button>
+                                    </div>
+                                    <div class="error" ng-show="formUsuario.login.$dirty && formUsuario.login.$invalid">
+                                        <small class="text-alert" ng-show="formUsuario.login.$error.required" >Login &eacute; obrigat&oacute;rio</small>
+                                        <small class="text-alert" ng-show="formUsuario.login.$error.minlength">Login deve conter pelo menos 3 letras</small>
+                                        <small class="text-alert" ng-show="formUsuario.login.$error.maxlength">Login n&atilde;o pode ter mais de 15 letras</small>
+                                    </div>
+                                </div>
+                                <div class="cell"></div>
+                                <div class="cell"></div>
+                            </div>
+                            <div class="row cells3">
+                                <div class="cell colspan2">
+                                    <div class="input-control text full-size" data-role="input-control">
+                                        <label>E-mail:</label>
+                                        <input type="email" name="email" ng-model="usuario.email" placeholder="email@empresa.com.br" required>
+                                        <button type="button" class="button helper-button clear" tabindex="-1">
+                                            <span class="mif-cross"></span>
+                                        </button>
+                                    </div>
+                                    <div class="error" ng-show="formUsuario.email.$dirty && formUsuario.email.$invalid">
+                                        <small class="text-alert" ng-show="formUsuario.email.$error.required" >Email &eacute; obrigat&oacute;rio</small>
+                                        <small class="text-alert" ng-show="formUsuario.email.$error.email">Email inv&aacutelido</small>
+                                    </div>
+                                </div>
+                                <div class="cell"></div>
+                                <div class="cell"></div>
+                            </div>
+                            <div class="row cells3">
+                                <div class="cell colspan2">
+                                    <div class="align-left">
+                                        <label>Selecione uma imagem</label>
+                                    </div>
+                                    <div class="row cells3" ng-show="progress > 0">
+                                        <div class="cell">
+                                            <div class="image-container bordered image-format-hd" style="width:110px; height: 125px ">
+                                                <div class="frame">
+                                                    <img ng-show="imagem[0] != null" ngf-src="imagem[0]" class="thumb">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cell colspan2">
+                                            <br>
+                                            <div ng-show="progress > 0">
+                                              Nome:&nbsp;{{name}}
+                                            </div>
+                                            <br>
+                                            <div ng-show="progress > 0">
+                                              Tamanho:&nbsp;{{size}}&nbsp;KB
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress small"  ng-show="progress > 0" data-role="progressBar" data-value="0">
+                                        <div class="bar default" style="width:{{progress}}%"></div>
+                                    </div>
+                                    <div ng-show="progress > 0">
+                                        {{progress}}%
+                                    </div>
+                                    <br>
+                                    <input type="file" accept="image/*" ng-model="imagem" name="file" ngf-select ngf-change="onFileSelect(imagem)" >
+                                    <!--<button class="button" data-ng-click="onFileSelect(usuario.localImagem)" type="button">enviar</button>-->
+                                </div>
+                                <div class="cell"></div>
+                                <div class="cell"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <button  class="button block-shadow-warning loading-cube lighten warning" data-ng-click="salvarUsuario(usuario);" ng-disabled="formUsuario.$invalid">&nbsp;Alterar</button>
+                            </div>
+                        </div>
+                        <div class="cell  align-right">
+                            <div class="padding40 no-padding-bottom">
+                                <div class="image-container bordered image-format-hd" style="width:220px; height: 250px ">
+                                    <div class="frame">
+                                        <img src="{{usuario.localImagem}}" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="padding80 no-padding-top">
+                                <button class="button loading-pulse block-shadow-info lighten primary" type="button" data-ng-click="download(usuario.id)">Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>

@@ -1,0 +1,125 @@
+<div class="bg-black fixed-top" style="padding: 1px">
+	<div class="grid">
+		<div class="row">
+			<div class="span4" style="padding-left: 20px;">
+				<img src="imagens/agenda.png">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="grid">
+    <div class="row">
+        <h4>
+           <a href="#/home"><span class="mif-arrow-left fg-darker padding10"></span><span style="color: black;">&nbsp;Login</span></a>
+        </h4>
+    </div>
+</div>
+
+<form name="formUsuario" ng-submit="signup()" role="form" novalidate method="post">
+	<fieldset>
+		<div class="grid">
+			<div class="panel" data-role="panel">
+				<div class="heading  bg-grayLight">
+					<span class="icon mif-user bg-gray fg-darker"></span>
+                    <span class="title">Cadastro de Usu&aacute;rio</span>
+				</div>
+                <div class="content">
+                    <br>
+                    <br>
+                    <br>
+					<div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control text full-size" data-role="input-control">
+                                <label>Nome:</label>
+                                <input type="text" name="nome" ng-model="nome" placeholder="Digite o seu nome" ng-minlength=3 ng-maxlength=60 required>
+                                <button type="button" class="button helper-button clear" tabindex="-1">
+                                    <span class="mif-cross"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formUsuario.nome.$dirty && formUsuario.nome.$invalid">
+                                <small class="text-alert" ng-show="formUsuario.nome.$error.required" >Nome do usu&aacute;rio &eacute; obrigat&oacute;rio</small>
+                                <small class="text-alert" ng-show="formUsuario.nome.$error.minlength">Nome do usu&aacute;rio deve conter pelo menos 3 letras</small>
+                                <small class="text-alert" ng-show="formUsuario.nome.$error.maxlength">Nome do usu&aacute;rio n&atilde;o pode ter mais de 60 letras</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+					</div>
+					<div class="row cells3">
+                        <div class="cell">
+                            <div class="input-control text full-size" data-role="input-control">
+                                <label>Login:</label>
+                                <input type="text" name="login" ng-model="login" placeholder="Digite o seu login" ng-minlength=3 ng-maxlength=15 required>
+                                <button type="button" class="button helper-button clear" tabindex="-1">
+                                    <span class="mif-cross"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formUsuario.login.$dirty && formUsuario.login.$invalid">
+                                <small class="text-alert" ng-show="formUsuario.login.$error.required" >Login &eacute; obrigat&oacute;rio</small>
+                                <small class="text-alert" ng-show="formUsuario.login.$error.minlength">Login deve conter pelo menos 3 letras</small>
+                                <small class="text-alert" ng-show="formUsuario.login.$error.maxlength">Login n&atilde;o pode ter mais de 15 letras</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+					</div>
+					<div class="row cells3">
+				        <div class="cell">
+							<div class="input-control text full-size" data-role="input-control">
+							    <label>E-mail:</label>
+					            <input type="email" name="email" ng-model="email" placeholder="email@empresa.com.br" required>
+                                <button type="button" class="button helper-button clear" tabindex="-1">
+                                    <span class="mif-cross"></span>
+                                </button>
+							</div>
+                            <div class="error" ng-show="formUsuario.email.$dirty && formUsuario.email.$invalid">
+                                <small class="text-alert" ng-show="formUsuario.email.$error.required" >Email &eacute; obrigat&oacute;rio</small>
+                                <small class="text-alert" ng-show="formUsuario.email.$error.email">Email inv&aacutelido</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+					</div>
+					<div class="row cells3">
+						<div class="cell">
+							<div class="input-control password full-size" data-role="input-control">
+							    <label>Senha:</label>
+						        <input type="password" name="password" ng-model="senha" placeholder="Digite a senha" ng-minlength=4 ng-maxlength=8 required>
+                                <button class="button helper-button reveal" tabindex="-1" type="button">
+                                    <span class="mif-looks"></span>
+                                </button>
+							</div>
+						    <div class="error" ng-show="formUsuario.password.$dirty && formUsuario.password.$invalid">
+                                <small class="text-alert" ng-show="formUsuario.password.$error.required" >Senha &eacute; obrigat&oacute;rio</small>
+                                <small class="text-alert" ng-show="formUsuario.password.$error.minlength">Senha deve conter pelo menos 4 caracteres</small>
+                                <small class="text-alert" ng-show="formUsuario.password.$error.maxlength">Senha n&atilde;o pode ter mais de 8 caracteres</small>
+                            </div>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+					</div>
+					<div class="row cells3">
+						<div class="cell">
+                            <div class="input-control password full-size" data-role="input-control">
+							    <label>Confirme a senha:</label>
+						         <input type="password" name="confirm_password"  ng-model="confirm_password" ui-validate=" '$value==formUsuario.password.$viewValue' " ui-validate-watch=" 'formUsuario.password.$viewValue' " placeholder="Confirme a senha" >
+                                <button class="button helper-button reveal" tabindex="-1" type="button">
+                                    <span class="mif-looks"></span>
+                                </button>
+                            </div>
+                            <div class="error" ng-show="formUsuario.confirm_password.$error.validator && ! myForm.password.$error.minlength">
+                                <small class="text-alert">Senhas diferentes</small>
+                            </div>
+                        </div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+					</div>
+                    <div class="row">
+						<button type="submit" class="button success fg-white loading-cube block-shadow-success lighten" ng-disabled="formUsuario.$invalid">&nbsp;Cadastrar</button>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</form>

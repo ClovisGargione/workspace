@@ -1,0 +1,30 @@
+	<nav class="app-bar bg-dark fixed-top" data-role="appbar">
+		<a href="#/home" class="app-bar-element branding"><img src="imagens/agenda.png" style="width:90px; height: auto;"></a>
+		<ul class="app-bar-menu">
+			<li>
+				<a href="#/contatos/lista" class="element">
+					<span class="mif-share"></span> Meus Contatos
+				</a>
+			</li>
+			<li>
+				<a href="#/email/envia" class="element">
+					<span class="mif-mail"></span> E-mail
+				</a>
+			</li>
+			<li>
+				<a href="#/home" class="element">
+					<span class="mif-flag"></span> Lembretes
+				</a>
+			</li>
+		</ul>
+		<ul class="app-bar-menu place-right" data-flexdirection="reverse">
+			<li>
+				<a href="#/usuarios/edit/{{usuarioId}}">
+					<span class="mif-user"></span> <em>{{usuarioLogado}}</em>
+				</a>
+			</li>
+			<li>
+				<a class="element place-right" href="#/logout"><span class="mif-exit" title="Sair"></span></a>
+			</li>
+		</ul>
+	</nav>

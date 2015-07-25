@@ -1,0 +1,79 @@
+
+<div class="bg-black fixed-top" style="padding: 1px">
+	<div class="grid">
+	    <div class="row">
+	        <div class="span4" style="padding-left: 20px;"><img src="imagens/agenda.png"></div>
+	     </div>
+	</div>
+</div>
+
+<div class="grid">
+<div class="container login-form row cells3" ng-controller="loginController">
+	<div class="cell"></div>
+	<div class="cell padding60">
+        <h2><span class="mif-user" style="background: black; color: white; padding: 10px; border-radius: 50%"></span>&nbsp;Agenda Web</h2>
+		<br>
+		<form name="loginForm" ng-submit="login()" role="form" novalidate method="post">
+		
+            	<div class="input-control text full-size modern iconic" data-role="input">
+					<input type="text" name="loginUsuario" ng-model="loginUsuario" required>
+					<span class="label">Seu login</span>
+					<span class="informer">Por favor, informe seu login</span>
+					<span class="placeholder" style="display: block;">Digite o seu usu&aacute;rio</span>
+					<span class="icon mif-user"></span>
+					<button class="button helper-button clear" tabindex="-1" type="button">
+						<span class="mif-cross"></span>
+					</button>
+                </div>
+                <div class="error" ng-show="loginForm.loginUsuario.$dirty && loginForm.loginUsuario.$invalid">
+    				<small class="text-alert" ng-show="loginForm.loginUsuario.$error.required" >Login &eacute; obrigat&oacute;rio</small>
+    			</div>
+                <br>
+				<br>
+				<div class="input-control password full-size modern iconic" data-role="input">
+                	<input type="password" name="senha" ng-model="senha" required>
+					<span class="label">Sua senha</span>
+					<span class="informer">Por favor, informe sua senha</span>
+					<span class="placeholder" style="display: block;">Digite a sua senha</span>
+					<span class="icon mif-lock"></span>
+					<button class="button helper-button reveal" tabindex="-1" type="button">
+						<span class="mif-looks"></span>
+					</button>
+                </div>
+				<div class="error" ng-show="loginForm.senha.$dirty && loginForm.senha.$invalid">
+    				<small class="text-alert" ng-show="loginForm.senha.$error.required" >Senha &eacute; obrigat&oacute;ria</small>
+    			</div>
+				<br/>
+				<br/>
+				<div class="row">
+					<a href="#/recuperasenha" class="element">
+						<u>Esqueci a senha</u>
+					</a>
+				</div>
+				<br/>
+
+                <button type="submit" class="image-button primary full-size" ng-disabled="loginForm.$invalid">
+					Entrar
+					<span class="icon mif-enter bg-darkBlue"></span>
+				</button>
+
+                <br/><br/>
+                <a href="#/registro">
+	                <button type="button" class="image-button warning full-size">
+					Cadastre-se
+	                <span class="icon mif-plus bg-darkOrange"></span>
+	                </button>
+                </a>
+		</form>
+		
+		<div class="bg-white fg-black" style="padding: 1px">
+			<div class="grid">
+				<div class="row align-center">
+					<div class="span4 text-center">&#169; Copyright 2015 Empresa Fantasia</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	<div class="cell"></div>
+</div>
+</div>

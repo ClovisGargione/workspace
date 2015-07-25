@@ -1,0 +1,48 @@
+<div class="grid">
+    <div class="row">
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
+<div class="grid">
+    <div class="row">
+        <h4>
+            <a href="#/email/lista"><span class="mif-arrow-left fg-darker padding10"></span><span style="color: black;">&nbsp;Enviar e-mail</span></a>
+        </h4>
+    </div>
+</div>
+
+<form name="formEmail">
+    <fieldset>
+        <div class="grid">
+            <div class="panel" data-role="panel">
+                <div class="heading  bg-grayLight">
+                    <span class="icon mif-mail bg-gray fg-darker"></span>
+                    <span class="title">Enviar</span>
+                </div>
+                <div class="content">
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row cells3">
+                        <div class="cell">
+                            <h5>Para:</h5>
+                            <div class="input-control select full-size">
+                                <select ng-model="email.destinatario">
+                                    <option ng-repeat="data in contatos">{{data.email}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="cell">
+                    </div>
+                    <div class="cell">
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>

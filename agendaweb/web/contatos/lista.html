@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/libs/DataTables-1.10.7/media/css/jquery.dataTables.css"/>
+<script type="text/javascript" src="/libs/DataTables-1.10.7/media/js/jquery.dataTables.js"></script>
+<fieldset>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="#/contatos/novo" class="element">
+        <button class="button warning fg-white loading-pulse block-shadow-warning lighten">&nbsp;&nbsp;Add contato</button>
+    </a>
+    <br>
+    <div class="grid">
+        <div class="row" ng-show="filteredItems > 0">
+            <table class="dataTable striped border bordered" data-searching="true" data-role="datatable" role="grid">
+                <thead>
+                    <tr role="row">
+                        <th  style="width: 50px;"><div class="align-center" style="width: 70px;">#</div></th>
+                        <th class="sorting">Id</th>
+                        <th class="sorting">Nome</th>
+                        <th class="sorting">E-mail</th>
+                        <th class="sorting"><div class="align-right">Telefone</div></th>
+                        <th class="sorting"><div class="align-center">Data de nascimento</div></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in list">
+                        <td class="align-center">
+                            <a href='#/contatos/edit/{{data.id}}' title="Editar contato">
+                                <span class="mif-pencil" style="background: black; color: white; padding: 7px; border-radius: 50%">
+                                </span>
+                            </a>
+                            <a style="cursor: pointer" data-ng-click="confirmarRemover(data.id)" title="Remover contato">
+                                <span class="mif-cancel" style="background: white; border: dashed; color: red; padding: 7px; border-radius: 50%">
+                                </span>
+                            </a>
+                        </td>
+                        <td class="align-left" style="width: 5%;">{{data.id}}</td>
+                        <td class="text-left">{{data.nome}}</td>
+                        <td class="text-left">{{data.email}}</td>
+                        <td class="align-right">{{data.telefone}}</td>
+                        <td class="align-center">{{data.dataNascimento}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</fieldset>
