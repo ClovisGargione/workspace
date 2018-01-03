@@ -1,0 +1,106 @@
+body{
+    background-color: darkslategrey;
+    background-image: url(../imagens/banner-01.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shadow{
+    box-shadow: 5px 5px 30px black;
+}
+
+.card-margin{
+    margin-top: 0.7%;
+    margin-bottom: 0.7%;
+}
+
+.padding-title{
+    margin: 1%;
+}
+
+.card-style{
+    margin-bottom:none;
+    padding:none;
+}
+
+.my-4 {
+    margin: 1.5rem !important;
+}
+
+img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    max-width: 100%;
+    max-height: 100px;
+}
+
+.font-title{
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: cursive;
+    color: #3C3C3C;
+}
+
+.modal-color{
+    background-color: #363636;
+    color: white;
+}
+
+.modal:before {
+    display: inline-block;
+    margin: auto 0px;
+  }
+
+#image-view{
+    max-width:994px;
+    height:auto;
+    margin:auto;
+}
+
+@media (max-width: 990px){
+    #image-view{
+        width:100%;
+        height:auto;
+        margin:auto;
+    }
+}
+
+@media (min-width: 992px){
+    .modal-lg {
+        max-width: 1024px;
+    }
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #4F4F4F;
+}
+
+.portlet-image{
+    width: 222px;
+    display: inline-table;
+    margin: 10px;
+    text-align: center;
+    background-color: #363636;
+    border-radius: 0.25rem;
+    border-style: none;
+}
+
+#dados-imagem{
+    vertical-align: middle;
+    padding-top: 8%;
+}

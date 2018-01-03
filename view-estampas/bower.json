@@ -1,0 +1,12 @@
+{
+  "name": "concurso amor em estampa",
+  "description": "A starter project",
+  "version": "0.0.0",
+  "homepage": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}
